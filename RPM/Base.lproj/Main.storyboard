@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="RymB8v2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Mlc-AK-FCV">
+                                <rect key="frame" x="140" y="83" width="321" height="322"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="50" y="177" width="300" height="300"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="needle.png" translatesAutoresizingMaskIntoConstraints="NO" id="tiZ-iM-gFU">
+                                <rect key="frame" x="180" y="-8" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="6GV-3d-8pN">
+                                        <variation key="widthClass=compact" constant="250"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="400" id="lUr-WR-9DM"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6GV-3d-8pN"/>
+                                        <exclude reference="lUr-WR-9DM"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="6GV-3d-8pN"/>
+                                        <include reference="lUr-WR-9DM"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Mlc-AK-FCV" secondAttribute="centerX" id="5wb-6z-qDs"/>
+                            <constraint firstAttribute="centerY" secondItem="tiZ-iM-gFU" secondAttribute="centerY" id="GOw-Zb-PDV"/>
+                            <constraint firstAttribute="centerX" secondItem="tiZ-iM-gFU" secondAttribute="centerX" id="NXa-pH-N5b"/>
+                            <constraint firstAttribute="centerX" secondItem="Mlc-AK-FCV" secondAttribute="centerX" id="lcB-Mk-fgG"/>
+                            <constraint firstAttribute="centerY" secondItem="Mlc-AK-FCV" secondAttribute="centerY" id="m0p-lz-QRl"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5wb-6z-qDs"/>
+                                <exclude reference="m0p-lz-QRl"/>
+                                <exclude reference="GOw-Zb-PDV"/>
+                                <exclude reference="NXa-pH-N5b"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="5wb-6z-qDs"/>
+                                <include reference="m0p-lz-QRl"/>
+                                <include reference="GOw-Zb-PDV"/>
+                                <include reference="NXa-pH-N5b"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="needle" destination="tiZ-iM-gFU" id="oAK-BH-a2w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="RymB8v2.png" width="300" height="300"/>
+        <image name="needle.png" width="400" height="400"/>
+    </resources>
+</document>
